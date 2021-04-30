@@ -17,20 +17,27 @@ function Calculator() {
 
     }
     function cal(val){
-        setData(eval(data))
+        try{
+            setData(eval(data))
+        } catch(error){
+            console.log(error);
+        }
+        
     }
 
 
     return (
         <div className="all">
-            <h2>Problem:</h2>
             <input value={data} onChange={getData}></input>
             <div className="buttons">
                 <button className="equals" onClick={cal} type="submit">=</button>
-                <button onClick={()=>{setData(data+"+")}}>+</button>
-                <button onClick={()=>{setData(data+"-")}}>-</button>
-                <button onClick={()=>{setData(data+"*")}}>*</button>
-                <button onClick={()=>{setData(data+"/")}}>/</button>
+                <button className="syms" onClick={()=>{setData(data+"+")}}>+</button>
+                <button className="syms" onClick={()=>{setData(data+"-")}}>-</button>
+                <button className="syms" onClick={()=>{setData(data+"*")}}>*</button>
+                <button className="syms" onClick={()=>{setData(data+"/")}}>/</button>
+                <button className="syms" onClick={()=>{setData(data+"%")}}>%</button>
+                <button className="syms" onClick={()=>{setData(data.slice(0, -1))}}>del</button>
+                <button className="syms" onClick={()=>{setData(data.slice(-1, -1))}}>CA</button>
                 <button onClick={()=>{setData(data+"0")}}>0</button>
                 <button onClick={()=>{setData(data+"1")}}>1</button>
                 <button onClick={()=>{setData(data+"2")}}>2</button>
