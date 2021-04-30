@@ -1,1 +1,1 @@
-Carculator, previously just a simple text copier
+Carculator, previously just a simple text copier.
