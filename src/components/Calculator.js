@@ -22,11 +22,15 @@ function Calculator() {
 
 
     return (
-        <div>
+        <div className="all">
             <h2>Problem:</h2>
             <input value={data} onChange={getData}></input>
-            <button onClick={cal} type="submit">=</button>
-            <div>
+            <div className="buttons">
+                <button className="equals" onClick={cal} type="submit">=</button>
+                <button onClick={()=>{setData(data+"+")}}>+</button>
+                <button onClick={()=>{setData(data+"-")}}>-</button>
+                <button onClick={()=>{setData(data+"*")}}>*</button>
+                <button onClick={()=>{setData(data+"/")}}>/</button>
                 <button onClick={()=>{setData(data+"0")}}>0</button>
                 <button onClick={()=>{setData(data+"1")}}>1</button>
                 <button onClick={()=>{setData(data+"2")}}>2</button>
@@ -37,13 +41,8 @@ function Calculator() {
                 <button onClick={()=>{setData(data+"7")}}>7</button>
                 <button onClick={()=>{setData(data+"8")}}>8</button>
                 <button onClick={()=>{setData(data+"9")}}>9</button>
-
-                <button onClick={()=>{setData(data+"+")}}>+</button>
-                <button onClick={()=>{setData(data+"-")}}>-</button>
-                <button onClick={()=>{setData(data+"*")}}>*</button>
-                <button onClick={()=>{setData(data+"/")}}>/</button>
-
             </div>
+
         </div>
     )
 }
