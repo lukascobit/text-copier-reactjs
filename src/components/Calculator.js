@@ -48,9 +48,10 @@ function Calculator() {
                 <button onClick={()=>{setData(data+"7")}}>7</button>
                 <button onClick={()=>{setData(data+"8")}}>8</button>
                 <button onClick={()=>{setData(data+"9")}}>9</button>
-                <button className="pi" onClick={()=>{setData(data+ Math.PI.toString())}}>π</button>
-                <button className="pi" onClick={()=>{setData(data+"(")}}>(</button>
-                <button className="pi" onClick={()=>{setData(data+")")}}>)</button>
+                <button className="endsyms" onClick={()=>{setData(data+ Math.PI.toString())}}>π</button>
+                <button className="endsyms" onClick={()=>{setData(data+"(")}}>(</button>
+                <button className="endsyms" onClick={()=>{setData(data+")")}}>)</button>
+
             </div>
         </div>
     )
