@@ -59,3 +59,9 @@ input{
   background: rgb(97,31,131);
   background: linear-gradient(90deg, rgba(97,31,131,1) 0%, rgba(78,118,246,1) 100%);
 }
+
+.pi{
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  background: rgb(132,162,127);
+  background: linear-gradient(90deg, rgba(132,162,127,1) 0%, rgba(201,247,176,1) 100%); 
+}

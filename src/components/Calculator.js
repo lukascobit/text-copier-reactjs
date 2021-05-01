@@ -2,29 +2,29 @@ import React, {useState} from 'react'
 
 function Calculator() {
 
-  
+    window.addEventListener("keypress",function(e){
+        if (e.key === 'Enter') {
+            cal()
+        }
+    })
+
 
     const [data,setData]= useState("")
 
     function getData(val) {
         try {
             setData(val.target.value)
-
-
         } catch (error) {
             console.log(error);
         }
-
     }
     function cal(val){
         try{
             setData(eval(data))
         } catch(error){
             console.log(error);
-        }
-        
+        }   
     }
-
 
     return (
         <div className="all">
@@ -48,8 +48,10 @@ function Calculator() {
                 <button onClick={()=>{setData(data+"7")}}>7</button>
                 <button onClick={()=>{setData(data+"8")}}>8</button>
                 <button onClick={()=>{setData(data+"9")}}>9</button>
+                <button className="pi" onClick={()=>{setData(data+ Math.PI.toString())}}>π</button>
+                <button className="pi" onClick={()=>{setData(data+"(")}}>(</button>
+                <button className="pi" onClick={()=>{setData(data+")")}}>)</button>
             </div>
-
         </div>
     )
 }
